@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+        li a{
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            font-size: 30px;
+        }
+        li{
+            float: left;
+        }
+        body{
+            background-image: url("download.jpg");
+            background-repeat: no-repeat;
+            background-size: 2000px;
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    
+    <center><h1 style="color: rgb(251, 250, 249);"> MY MUSIC</h1></center><br>
+
+    <nav class="nav">
+        <ul>
+            <li>
+             <a  href="#" title="home">Home</a>
+            </li> 
+            <li>
+                <a href="#" title="help">Help</a>
+            </li>
+            <li>
+                <a href="#" title="music">Music</a>
+            </li>
+            <li>
+                <a href="#" title="search">Search</a>
+            </li>
+            <li>
+                <a href="#" title="like music">Like Music</a>
+            </li>
+        </ul>
+    </nav>
+    <img src="play-332.png" height="150px" width="150px" id="icon">
+    <audio id="song">
+        <source src="Ormakal-Dulquer-Salmaan.mp3" type="audio/mp3">
+        
+    </audio>
+    <script >
+        var song = document.getElementById("song");
+        var icon = document.getElementById("icon");
+        icon.onclick = function() {
+            if (song.paused) {
+                song.play();
+                icon.src = "pause.png";
+            } else {
+                song.pause();
+                icon.src = "play-332.png";
+            }
+            
+        }
+    </script>
+</body>
+</html>
